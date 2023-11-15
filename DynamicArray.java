@@ -28,7 +28,9 @@ public class DynamicArray<T> {
     }
 
     public T get(int index) {
-        return array[index];
+        if(size < index) return array[index];
+
+        return null;
     }
 
     public void pop() {
